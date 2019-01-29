@@ -1,5 +1,10 @@
 import React from 'react'
+import {HashRouter as Router, Route} from 'react-router-dom'
+
 import Monkeys from './Monkeys'
+import Home from './Home'
+import Bananas from './Bananas'
+import Nav from './Nav'
 
 const data = ['bob', 'alice', 'cornelius', 'george' ]
 
@@ -30,12 +35,17 @@ class App extends React.Component {
     const {klass, title, showMonkeys} = this.state
 
     return (
-      <div className={klass}>
-        <a href='/404' onClick={clickLink} onContextMenu={rightclick}>Freedom</a>
-        <h1>{title}</h1>
-        <button onClick={this.toggle.bind(this)}>Toggle</button>
-        {showMonkeys ? <Monkeys names={data} /> : '' }
-      </div>
+      <Router>
+        <div className={klass}>
+          <a href='/404' onClick={clickLink} onContextMenu={rightclick}>Freedom</a>
+          <Route path='/' component={Nav} />
+          <h1>{title}</h1>
+          <button onClick={this.toggle.bind(this)}>Toggle</button>
+          {showMonkeys ? <Monkeys names={data} /> : '' }
+          <Route exact path='/' component={Home} />
+          <Route path='/bananas' component={Bananas} />
+        </div>
+      </Router>
     )
   }
 }
