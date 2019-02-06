@@ -1,8 +1,14 @@
 import React from 'react'
 
+import loremrick, { LoremRicksum } from './loremrick'
+
+
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <React.Fragment>
+      <h1>React development has begun!</h1>
+      <LoremRicksum />
+    </React.Fragment>
   )
 }
 
