@@ -26,7 +26,6 @@ class Nasa extends React.Component {
   render() {
 
     const keys = Object.keys(this.state.picOfDay)
-    console.log(keys)
 
     return (
       <div>
