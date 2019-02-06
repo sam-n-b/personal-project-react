@@ -26,7 +26,7 @@ class Urban extends React.Component {
           <p>Example: {this.state.result.example}</p>
         </div>
         )}
-      <button onClick={this.loadDefinition}>Hello</button>
+      <button onClick={this.loadDefinition}>Search</button>
     </div>
     )
   }

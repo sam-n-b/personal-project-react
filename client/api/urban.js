@@ -1,5 +1,5 @@
 import request from 'superagent'
-const apiEndpoint = "https://mashape-community-urban-dictionary.p.mashape.com/define?term=yeet"
+const apiEndpoint = "https://mashape-community-urban-dictionary.p.mashape.com/define?term=karl"
 
 export function getDefinition() {
   return request 
