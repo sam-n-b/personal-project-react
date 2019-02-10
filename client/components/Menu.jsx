@@ -8,11 +8,11 @@ class Menu extends React.Component{
     }
     render(){
         return(
-            <ul>
-               <li><Link to="/user">Show User</Link></li>
-               <li><Link to="/movie">Show Movie</Link></li>
-                <li>test</li>
-            </ul>
+            <div className='row'>
+                <div className='col-md-4 navLink'><Link to="/">Go Home</Link></div>
+               <div className='col-md-4'><Link to="/user">Show User</Link></div>
+               <div className='col-md-4'><Link to="/movie">Show Movie</Link></div>
+            </div>
         )
     }
 

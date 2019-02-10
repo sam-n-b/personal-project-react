@@ -7,14 +7,16 @@ import {Link} from 'react-router-dom'
 import Movie from './Movie'
 import Menu from './Menu'
 import User from './User'
+import Home from './Home'
 
 const App = () => {
   return (
     <div>
     <Router>
-      <div>
-      <h1>React development has begun!</h1>
+      <div className='container'>
       <Menu/>
+      <h1>Hello Movies!</h1>
+      <Route exact path='/' component={Home}/>
       <Route path='/user' component={User}/>
       <Route path='/movie' component={Movie}/>
       <Route path='/menu' component={Menu}/>
