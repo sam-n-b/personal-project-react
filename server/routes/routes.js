@@ -1,6 +1,13 @@
 const express = require('express')
 const router = express.Router()
+const db = require('../db/db')
 
-router.get('/', (req,res)=>{
-res.send(ok)
+router.get('/users', (req,res)=>{
+return db.listUsers()
+.then(users =>{
+    res.json(users)
 })
+})
+
+
+module.exports = router

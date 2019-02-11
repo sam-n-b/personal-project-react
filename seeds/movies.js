@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
         {movieId: 114150, title: 'Pitch Perfect', image: './z'},
         {movieId: 864, title: 'Cool Runnings', image: './x'},
         {movieId: 443463, title: 'Leave No Trace', image: './y'},
-        {movieId: 906, title: 'Shutter Island', image: './z'},
+        {movieId: 11324, title: 'Shutter Island', image: './z'},
         {movieId: 920, title: 'Cars', image: './x'},
         {movieId: 264660, title: 'Ex Machina', image: './y'},
         {movieId: 244786, title: 'Whiplash', image: './z'},
