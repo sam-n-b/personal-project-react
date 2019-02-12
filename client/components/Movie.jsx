@@ -24,8 +24,8 @@ class Movie extends React.Component{
     render(){
         return(
         
-            this.state.movies.map((movie)=>{
-                return <MovieSingle mov={movie}/>
+            this.state.movies.map((movie,i)=>{
+                return <MovieSingle key={i} mov={movie}/>
             })
     
         )
