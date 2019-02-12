@@ -46,7 +46,7 @@ class App extends React.Component{
       <div className='container'>
       <Menu/>
       <h1>Hello Movies!</h1>
-      <Route exact path='/' component={Home}/>
+      <Route path='/home' component={Home}/>
       <Route path='/user' component={User}/>
       <div className = 'row'>
       <Route path='/movie' component={Movie}/>
