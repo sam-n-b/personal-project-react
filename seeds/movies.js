@@ -5,18 +5,18 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('movies').insert([
-        {movieId: 249688, title: 'End of the Tour', image: './x'},
-        {movieId: 347031, title: 'Swiss Army Man', image: './y'},
-        {movieId: 114150, title: 'Pitch Perfect', image: './z'},
-        {movieId: 864, title: 'Cool Runnings', image: './x'},
-        {movieId: 443463, title: 'Leave No Trace', image: './y'},
-        {movieId: 11324, title: 'Shutter Island', image: './z'},
-        {movieId: 920, title: 'Cars', image: './x'},
-        {movieId: 264660, title: 'Ex Machina', image: './y'},
-        {movieId: 244786, title: 'Whiplash', image: './z'},
-        {movieId: 597, title: 'Titanic', image: './x'},
-        {movieId: 426426, title: 'Roma', image: './y'},
-        {movieId: 169813, title: 'Short Term 12', image: './z'}
+        {movieId: 249688, title: 'End of the Tour', image: '/images/end_of_the_tour.jpg'},
+        {movieId: 347031, title: 'Swiss Army Man', image: '/images/swissArmyMan.jpg'},
+        {movieId: 114150, title: 'Pitch Perfect', image: '/images/pitchPerfect.jpg'},
+        {movieId: 864, title: 'Cool Runnings', image: '/images/coolRunnings.jpg'},
+        {movieId: 443463, title: 'Leave No Trace', image: '/images/leaveNoTrace.jpg'},
+        {movieId: 11324, title: 'Shutter Island', image: '/images/shutterIsland.jpg'},
+        {movieId: 920, title: 'Cars', image: '/images/cars.jpg'},
+        {movieId: 264660, title: 'Ex Machina', image: '/images/exMachina.jpg'},
+        {movieId: 244786, title: 'Whiplash', image: '/images/whiplash.jpg'},
+        {movieId: 597, title: 'Titanic', image: 'images/titanic.jpg'},
+        {movieId: 426426, title: 'Roma', image: '/images/roma.jpg'},
+        {movieId: 169813, title: 'Short Term 12', image: '/images/shortTerm12.jpg'}
       ]);
     });
 };

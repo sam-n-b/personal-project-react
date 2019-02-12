@@ -6,8 +6,15 @@ function listUsers (db = connection) {
     return db('userList').select('userList.name', 'userList.id')
 }
 
+function listMovies (db= connection) {
+    return db('movies').select()
+}
 
-
+function listMovieById (id, db=connection){
+    return db('movies').where(id, 'movieId').select()
+}
 module.exports = {
-    listUsers
+    listUsers,
+    listMovies,
+    listMovieById
   }

@@ -8,3 +8,12 @@ export function getUsers () {
 
     })
 }
+
+export function getMovies () {
+    return request.get('/api/movies')
+    .then(res => {
+        const posts =res.body
+        return posts
+
+    })
+}

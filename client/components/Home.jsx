@@ -25,40 +25,42 @@ class Home extends React.Component{
     }
         render(){
             return(
-                <div className='row'>
-                    <div className='col-md-3'>
-                        <h3 className='movie-title'>{this.state.title1}</h3>
-                        <img className='movie-image' src={this.state.image1}></img>
-                    </div>
-                    <div className='col-md-3'>
-                        <h3 className='movie-title'>{this.state.title2}</h3>
-                        <img className='movie-image' src={this.state.image2}></img>
-                    </div>
-                    <div className='col-md-3'>
-                        <h3 className='movie-title'>{this.state.title3}</h3>
-                        <img className='movie-image' src={this.state.image3}></img>
-                    </div>
-                    <div className='col-md-3'>
-                        <h3 className='movie-title'>{this.state.title4}</h3>
-                        <img className='movie-image' src={this.state.image4}></img>
-                    </div>
-                    <div className='col-md-3'>
-                        <h3 className='movie-title'>{this.state.title5}</h3>
-                        <img className='movie-image' src={this.state.image5}></img>
-                    </div>
-                    <div className='col-md-3'>
-                        <h3 className='movie-title'>{this.state.title6}</h3>
-                        <img className='movie-image' src={this.state.image6}></img>
-                    </div>
-                    <div className='col-md-3'>
-                        <h3 className='movie-title'>{this.state.title7}</h3>
-                        <img className='movie-image' src={this.state.image7}></img>
-                    </div>
-                    <div className='col-md-3'>
-                        <h3 className='movie-title'>{this.state.title8}</h3>
-                        <img className='movie-image' src={this.state.image8}></img>
-                    </div>
-                </div>
+
+                <h1>home</h1>
+                // <div className='row'>
+                //     <div className='col-md-3'>
+                //         <h3 className='movie-title'>{this.state.title1}</h3>
+                //         <img className='movie-image' src={this.state.image1}></img>
+                //     </div>
+                //     <div className='col-md-3'>
+                //         <h3 className='movie-title'>{this.state.title2}</h3>
+                //         <img className='movie-image' src={this.state.image2}></img>
+                //     </div>
+                //     <div className='col-md-3'>
+                //         <h3 className='movie-title'>{this.state.title3}</h3>
+                //         <img className='movie-image' src={this.state.image3}></img>
+                //     </div>
+                //     <div className='col-md-3'>
+                //         <h3 className='movie-title'>{this.state.title4}</h3>
+                //         <img className='movie-image' src={this.state.image4}></img>
+                //     </div>
+                //     <div className='col-md-3'>
+                //         <h3 className='movie-title'>{this.state.title5}</h3>
+                //         <img className='movie-image' src={this.state.image5}></img>
+                //     </div>
+                //     <div className='col-md-3'>
+                //         <h3 className='movie-title'>{this.state.title6}</h3>
+                //         <img className='movie-image' src={this.state.image6}></img>
+                //     </div>
+                //     <div className='col-md-3'>
+                //         <h3 className='movie-title'>{this.state.title7}</h3>
+                //         <img className='movie-image' src={this.state.image7}></img>
+                //     </div>
+                //     <div className='col-md-3'>
+                //         <h3 className='movie-title'>{this.state.title8}</h3>
+                //         <img className='movie-image' src={this.state.image8}></img>
+                //     </div>
+                // </div>
             )
         
     }

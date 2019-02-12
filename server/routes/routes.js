@@ -9,5 +9,19 @@ return db.listUsers()
 })
 })
 
+router.get('/movies', (req,res)=>{
+    return db.listMovies()
+    .then(movies =>{
+        res.json(movies)
+    })
+    })
+
+    router.get('/movie:id', (req,res)=>{
+        id= req.params.id
+        return db.listMovieById(id)
+        .then(movie =>{
+            res.json(movie)
+        })
+        })
 
 module.exports = router

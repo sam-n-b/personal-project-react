@@ -9,17 +9,21 @@ import Menu from './Menu'
 import User from './User'
 import Home from './Home'
 import {getUsers} from '../api/index'
+import {getMovies} from '../api/index'
 
 class App extends React.Component{
   constructor (props) {
     super(props)
     this.state = {
-      users: []
+      users: [],
+      movies:[]
     }
     this.fetchUsers = this.fetchUsers.bind(this)
+    this.fetchMovies = this.fetchMovies.bind(this)
   }
   componentDidMount(){
     this.fetchUsers()
+    this.fetchMovies()
   }
   
   fetchUsers() {
@@ -28,6 +32,13 @@ class App extends React.Component{
             this.setState({users: users})
         })
     }
+
+    fetchMovies() {
+      return getMovies()
+      .then(movies =>{
+          this.setState({movies: movies})
+      })
+  }
   render() {
   return (
     <div>
@@ -40,6 +51,7 @@ class App extends React.Component{
       <Route path='/movie' component={Movie}/>
       <Route path='/menu' component={Menu}/>
       {this.state.users.map(user => <User user={user}/>)}
+      <Movie movies={this.state.movies}/>
       </div>
     </Router>
     </div>
