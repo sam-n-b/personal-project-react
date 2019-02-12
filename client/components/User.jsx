@@ -1,13 +1,16 @@
 import React from 'react'
+import {getUsers} from '../api/index'
 
 class User extends React.Component{
     constructor(props){
         super(props)
-        this.state = {}
+        this.state = {
+         
+        }
     }
     render(){
         return(
-            <h1>USER STUFF HERE</h1>
+            <h1>{this.props.user.name}</h1>
         )
     }
 }
