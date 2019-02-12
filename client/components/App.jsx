@@ -51,7 +51,6 @@ class App extends React.Component{
       <Route path='/movie' component={Movie}/>
       <Route path='/menu' component={Menu}/>
       {this.state.users.map(user => <User user={user}/>)}
-      <Movie movies={this.state.movies}/>
       </div>
     </Router>
     </div>
