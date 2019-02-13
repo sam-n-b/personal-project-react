@@ -38,17 +38,27 @@ class MovieById extends React.Component{
 render(){
     return(
         <div>
+             
+            <div className='row whitesplash'>
+            <div className='col-md-3'>
+           
+            <img className='movieImageLarge' src= {`https://image.tmdb.org/t/p/w500${this.state.newMov.poster_path}`}></img>
+            </div>
+            <div className='col-md-9'>
             <h1>{this.state.newMov.title}</h1>
-            <img src= {`https://image.tmdb.org/t/p/w500${this.state.newMov.poster_path}`}></img>
+            <h5>Overview:</h5>
             <p>{this.state.newMov.overview}</p>
+            <p>Release Date: {this.state.newMov.release_date}</p>
+            <p>Runtime: {this.state.newMov.runtime} minutes</p>
+            </div>
+            </div>
             {console.log(this.props.match.params.id)}
-        {this.state.ratings.map( item=>{
-            return(<div>
-                <p>{item.name} says:</p>
+        {this.state.ratings.map((item,i)=>{
+            return(<div className='reviewDiv' key={i}>
+                <h5>{item.name} says:</h5>
                 <p>{item.review}</p>
-                <p>{item.rating} Stars</p>
+                <h6>{item.rating} Stars</h6>
                 
-                <br></br>
                 </div>)
         })}
         </div>
