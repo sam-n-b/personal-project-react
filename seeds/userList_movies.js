@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
         {id: 501, userId: 1, movieId:249688, rating:3, review:'good'},
         {id: 502, userId: 1, movieId:347031, rating:2, review:'not so good'},
         {id: 503, userId: 1, movieId:114150, rating:4, review:'pow!'},
-        {id: 504, userId: 1, movieId:864, rating:5, review:"I see pride, I see power, I see a badass mother who dont take no crap of of nobody.I see pride, I see power, I see a badass mother who don't take no crap of of nobody"},
+        {id: 504, userId: 1, movieId:864, rating:5, review:"I see pride, I see power, I see a badass mother who dont take no crap off of nobody. I see pride, I see power, I see a badass mother who don't take no crap off of nobody"},
         {id: 505, userId: 1, movieId:443463, rating:3.5, review:'aight'},
         {id: 506, userId: 2, movieId:249688, rating:5, review:'perfect'},
         {id: 507, userId: 2, movieId:114150, rating:3, review:'yup'},

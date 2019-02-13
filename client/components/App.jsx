@@ -11,6 +11,7 @@ import Home from './Home'
 import {getUsers} from '../api/index'
 import {getMovies} from '../api/index'
 import MovieById from './MovieById';
+import Head from './Head'
 
 class App extends React.Component{
   constructor (props) {
@@ -44,9 +45,10 @@ class App extends React.Component{
   return (
     <div>
     <Router>
+     
       <div className='container'>
+      <Head/>
       <Menu/>
-      <h1>Hello Movies!</h1>
       <Route path='/home' component={Home}/>
       <Route path='/user' component={User}/>
       <div className = 'row'>
