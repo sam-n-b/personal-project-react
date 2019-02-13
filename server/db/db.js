@@ -10,8 +10,8 @@ function listMovies (db= connection) {
     return db('movies').select()
 }
 
-function listMovieById (id, db=connection){
-    return db('movies').where(id, 'movieId').select()
+function listMovieById (id, db = connection){
+    return db('movies').where('movieId', id).select()
 }
 module.exports = {
     listUsers,

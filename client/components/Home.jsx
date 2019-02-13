@@ -6,15 +6,14 @@ class Home extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            
+            newMov: []
         }
     }
     componentDidMount(){
         request.get('https://api.themoviedb.org/3/movie/popular?api_key=55cbe42df23eb1960075410f3958de2a&language=en-US&page=1')
         .then(res=>{
-         console.log(res)
          this.setState({
-             newMov : res.body
+             newMov : res.body.results
          })
         })
     
@@ -24,7 +23,9 @@ class Home extends React.Component{
             return(
                 
                 <div>
-               {console.log(this.state.newMov)}
+               {this.state.newMov.map((item)=>{
+                  return <p>{item.title}</p>
+               })}
                     
                         hi
                     </div>

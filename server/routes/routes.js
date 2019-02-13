@@ -16,9 +16,10 @@ router.get('/movies', (req,res)=>{
     })
     })
 
-    router.get('/movie:id', (req,res)=>{
+    router.get('/movie/:id', (req,res)=>{
         id= req.params.id
         return db.listMovieById(id)
+        .then(console.log(id))
         .then(movie =>{
             res.json(movie)
         })
