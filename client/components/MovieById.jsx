@@ -7,14 +7,24 @@ class MovieById extends React.Component{
     constructor(props){
         super(props)
         this.state = {
+            ratings:[],
+            newMov:[]
 
-            ratings:[]
         }
         this.fetchMovieRatings = this.fetchMovieRatings.bind(this)
 
     }
     componentDidMount(){
         this.fetchMovieRatings()
+        var movId = this.props.match.params.id
+        var apiKey = '55cbe42df23eb1960075410f3958de2a'
+        request.get(`https://api.themoviedb.org/3/movie/${movId}?api_key=${apiKey}&language=en-US`
+            )
+        .then(res=>{
+         this.setState({
+             newMov : res.body
+         })
+        })
     }
     
     fetchMovieRatings(){
@@ -29,7 +39,15 @@ render(){
     return(
         <div>
             {console.log(this.props.match.params.id)}
-        <h1>movieById</h1>
+        {this.state.ratings.map( item=>{
+            return(<div>
+                <p>{item.name} says:</p>
+                <p>{item.review}</p>
+                <p>{item.rating} Stars</p>
+                
+                <br></br>
+                </div>)
+        })}
         </div>
     )
 }
