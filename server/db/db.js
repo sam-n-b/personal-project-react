@@ -25,8 +25,9 @@ function showWatched (id, db = connection) {
   function showMovie(id, db = connection) {
     return db('userList_movies')
     .join('movies', 'movies.movieID', 'userList_movies.movieId')
+    .join('userList', 'userList.id', 'userList_movies.userId')
     .where('userList_movies.movieId', id)
-    .select('userList_movies.rating', 'userList_movies.review')
+    .select('userList_movies.rating', 'userList_movies.review', 'userList.name')
   }
   
 module.exports = {
