@@ -10,6 +10,7 @@ import User from './User'
 import Home from './Home'
 import {getUsers} from '../api/index'
 import {getMovies} from '../api/index'
+import MovieById from './MovieById';
 
 class App extends React.Component{
   constructor (props) {
@@ -49,10 +50,12 @@ class App extends React.Component{
       <Route path='/home' component={Home}/>
       <Route path='/user' component={User}/>
       <div className = 'row'>
-      <Route path='/movie' component={Movie}/>
+      <Route path='/movies' component={Movie}/>
       </div>
       <Route path='/menu' component={Menu}/>
+      <Route path='/movie/:id' component={MovieById} />
       </div>
+      
     </Router>
     </div>
   )
