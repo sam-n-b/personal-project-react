@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import request from 'superagent'
 
+import LatestMovieSingle from './LatestMovieSingle'
+
 class Home extends React.Component{
     constructor(props){
         super(props)
@@ -21,21 +23,16 @@ class Home extends React.Component{
     }
         render(){
             return(
+               <div className='row'>
+                   {this.state.newMov.map((title,i)=>{
+                       return(
+                           <LatestMovieSingle mov={title} key={i}/>
+                       )
+                   })}
+               </div>
                 
-                <div>
-               {this.state.newMov.map((item)=>{
-                  return <p>{item.title}</p>
-               })}
-                    
-                        hi
-                    </div>
                 
-            
-                
-
-              
             )
-        
     }
 }
 

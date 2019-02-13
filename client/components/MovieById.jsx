@@ -38,6 +38,9 @@ class MovieById extends React.Component{
 render(){
     return(
         <div>
+            <h1>{this.state.newMov.title}</h1>
+            <img src= {`https://image.tmdb.org/t/p/w500${this.state.newMov.poster_path}`}></img>
+            <p>{this.state.newMov.overview}</p>
             {console.log(this.props.match.params.id)}
         {this.state.ratings.map( item=>{
             return(<div>
