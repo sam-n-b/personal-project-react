@@ -13,8 +13,26 @@ function listMovies (db= connection) {
 function listMovieById (id, db = connection){
     return db('movies').where('movieId', id).select()
 }
+
+function showWatched (id, db = connection) {
+    return db('userList_movies')
+    .join('movies', 'movies.movieId', 'userList_movies.movieId')
+    .where('userList_movies.userId', id)
+    .select('movies.title','movies.image', 'userList_movies.rating', 'userList_movies.review')
+  
+  }
+
+  function showMovie(id, db = connection) {
+    return db('userList_movies')
+    .join('movies', 'movies.movieID', 'userList_movies.movieId')
+    .where('userList_movies.movieId', id)
+    .select('userList_movies.rating', 'userList_movies.review')
+  }
+  
 module.exports = {
     listUsers,
     listMovies,
-    listMovieById
+    listMovieById,
+    showWatched,
+    showMovie
   }
